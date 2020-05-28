@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class Pausa : MonoBehaviour
 {
+    
     [SerializeField] private bool isPaused;
     [SerializeField] private GameObject pauseMenu;
     // Start is called before the first frame update
@@ -15,6 +16,7 @@ public class Pausa : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             isPaused = !isPaused;
