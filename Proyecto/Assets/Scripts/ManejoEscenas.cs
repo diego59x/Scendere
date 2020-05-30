@@ -5,17 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class ManejoEscenas : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+  
     public void GameScene()
     {
         SceneManager.LoadScene("Game");
@@ -24,12 +14,13 @@ public class ManejoEscenas : MonoBehaviour
     {
         SceneManager.LoadScene("Audio");
     }
-    public void LevelsScene()
+    public void MenuScene()
     {
-        SceneManager.LoadScene("Levels");
+        SceneManager.LoadScene("Menu");
     }
-    public void StoreScene()
+    public void CostumeScene()
     {
-        SceneManager.LoadScene("Store");
+        SceneManager.LoadScene("Costume");
     }
+
 }

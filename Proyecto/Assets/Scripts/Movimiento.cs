@@ -4,13 +4,21 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.SocialPlatforms.Impl;
+using System.Net.Http.Headers;
 
 public class Movimiento : MonoBehaviour
 {
     [SerializeField] private bool isPaused;
     [SerializeField] private GameObject deadMenu;
+    public Material material_1, material_2, material_3, material_4;
+    private Renderer myrend;
+    private static readonly string SelectMaterial = "SelectMaterial";
+
+
     public float speed;
-    private Animator animation;
+    public AudioSource bite;
+    public AudioSource death;
+    //private Animator animatin;
     private int kiwis;
     public float plusVelocity = 0;
     public Text scoreText;
@@ -18,10 +26,33 @@ public class Movimiento : MonoBehaviour
     public float maxHeight;
     public float minHeight;
     // Start is called before the first frame update 
+    void Awake()
+    {
+        myrend = this.GetComponent<Renderer>();
+    }
     void Start()
     {
-        animation = GetComponent<Animator>();
-        
+        //animatin = GetComponent<Animator>();
+        int getMaterial;
+
+        getMaterial = PlayerPrefs.GetInt(SelectMaterial);
+        switch(getMaterial){
+            case 1:
+                myrend.material = material_1;
+                break;
+            case 2:
+                myrend.material = material_2;
+                break;
+            case 3:
+                myrend.material = material_3;
+                break;
+            case 4:
+                myrend.material = material_4;
+                break;
+            default:
+                break;
+
+        }
     }
 
     // Update is called once per frame
@@ -36,10 +67,10 @@ public class Movimiento : MonoBehaviour
         {
             transform.position = transform.position + new Vector3(maxHeight, 0, 0);
         }
-        if (transform.position.z == -0.33f)
-        {
-            animation.enabled = false;
-        }
+        //if (transform.position.z >= -0.33f)
+        //{
+        //    animatin.enabled = false;
+        //}
     }
 
     private void FixedUpdate()
@@ -58,6 +89,7 @@ public class Movimiento : MonoBehaviour
         
         if (collision.gameObject.CompareTag("Shock"))
         {
+            death.Play();
             isPaused = !isPaused;
 
             if (isPaused)
@@ -78,6 +110,7 @@ public class Movimiento : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Kiwi"))
         {
+            bite.Play();
             kiwis += 1;
             Destroy(other.gameObject);
             plusVelocity += 1f;

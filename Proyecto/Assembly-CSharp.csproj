@@ -63,13 +63,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\CreateMaps.cs" />
-    <Compile Include="Assets\Rodar.cs" />
+    <Compile Include="Assets\Scripts\AudioManager.cs" />
     <Compile Include="Assets\Scripts\Camara.cs" />
+    <Compile Include="Assets\Scripts\ChangeMaterial.cs" />
+    <Compile Include="Assets\Scripts\CreateMaps.cs" />
     <Compile Include="Assets\Scripts\ManejoEscenas.cs" />
     <Compile Include="Assets\Scripts\Movimiento.cs" />
     <Compile Include="Assets\Scripts\Pausa.cs" />
+    <Compile Include="Assets\Scripts\Rodar.cs" />
     <Compile Include="Assets\Scripts\Rotacion.cs" />
+    <Compile Include="Assets\Scripts\SaveAudio.cs" />
     <None Include="Assets\Valencia Fountain\Readme.txt" />
     <None Include="Assets\Fruit Pack\Shaders\ToonLitTransparent.shader" />
     <None Include="Assets\UrbanNightSky\Readme.txt" />
