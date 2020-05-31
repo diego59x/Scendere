@@ -16,6 +16,7 @@ public class Rodar : MonoBehaviour
     }
     void Start()
     {
+        Time.timeScale = 1;
         int getMaterial;
 
         getMaterial = PlayerPrefs.GetInt(SelectMaterial);

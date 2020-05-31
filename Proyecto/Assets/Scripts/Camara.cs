@@ -19,10 +19,7 @@ public class Camara : MonoBehaviour
     {
         if (player)
             transform.position = player.transform.position - distVec;
-
-        //transform.Translate(0, 0, speed * Time.deltaTime);
     }
 
-    // Update is called once per frame
-
+  
 }

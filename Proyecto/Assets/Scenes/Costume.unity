@@ -311,7 +311,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ab6ccd85134146c4ea999d74ea7f9bae, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6bbbc7636578386429f96b1d397d5da6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -949,8 +949,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sphere: {fileID: 1547298819}
-  material_1: {fileID: 2100000, guid: 9eaa734acfeaf5a4daeb3437585f1a5a, type: 2}
-  material_2: {fileID: 2100000, guid: e966137409c4afa49ac97e36968aa79e, type: 2}
+  material_1: {fileID: 2100000, guid: e966137409c4afa49ac97e36968aa79e, type: 2}
+  material_2: {fileID: 2100000, guid: 9eaa734acfeaf5a4daeb3437585f1a5a, type: 2}
   material_3: {fileID: 2100000, guid: 1f0353207c12cb2479fac4aaac8463b3, type: 2}
   material_4: {fileID: 2100000, guid: 3d84193ded50c394d9c206e40f659e58, type: 2}
 --- !u!4 &939786209
@@ -1958,7 +1958,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6bbbc7636578386429f96b1d397d5da6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ab6ccd85134146c4ea999d74ea7f9bae, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
