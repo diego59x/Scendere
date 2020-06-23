@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.Timeline;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CreateMaps : MonoBehaviour
 {
@@ -9,9 +6,13 @@ public class CreateMaps : MonoBehaviour
     public GameObject[] wall;
     public GameObject player;
     private int dist = 0;
+    private bool pause;
     int rand;
+    public Pausa pausa;
     private void Start()
     {
+        
+        pause = pausa.GetPause();
         // Instancio el primer mapa asi para iniciar 
         Instantiate(map[0], new Vector3(0, 3.77f, dist + 5), Quaternion.identity);
         Instantiate(wall[0], new Vector3(-1.36f, 4.7f, dist + 5), Quaternion.identity);
@@ -22,7 +23,7 @@ public class CreateMaps : MonoBehaviour
         //Debug.Log(player.transform.position.z);
 
         
-        if (player)
+        if (player && pause == false)
         {
             // se crea el primer mapa, es redundante esto pero lo quise hacer por distancia
             // con tiempos hubiera sido mas sencillo pero no lo se usar muy bien :(

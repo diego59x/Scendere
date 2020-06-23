@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.PackageManager;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 // Script tomado de https://www.youtube.com/watch?v=9ROolmPSC70
 public class AudioManager : MonoBehaviour

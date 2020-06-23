@@ -6,7 +6,8 @@ public class Pausa : MonoBehaviour
 {
     
     [SerializeField] private bool isPaused;
-    [SerializeField] private GameObject pauseMenu;
+    public GameObject pauseMenu;
+
     // Start is called before the first frame update
     // Update is called once per frame
     void Update()
@@ -32,7 +33,7 @@ public class Pausa : MonoBehaviour
     }
     public void DeadactivateMenu()
     {
-        // AudioListener.pause = false;
+        AudioListener.pause = false;
         Time.timeScale = 1;
         pauseMenu.SetActive(false);
         isPaused = false;
@@ -44,5 +45,9 @@ public class Pausa : MonoBehaviour
     public void MainScene()
     {
         SceneManager.LoadScene("Menu");
+    }
+    public bool GetPause()
+    {
+        return isPaused;
     }
 }
