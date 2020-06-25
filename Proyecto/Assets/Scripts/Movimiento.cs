@@ -29,14 +29,34 @@ public class Movimiento : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.A) && transform.position.x > minHeight)
+
+        if (Input.touchCount > 0)
         {
-            transform.position = transform.position + new Vector3(minHeight, 0, 0);
+            Touch touch = Input.GetTouch(0);
+
+            if (transform.position.x > minHeight && touch.position.x < Screen.width / 2)
+            {
+
+                transform.position += new Vector3(minHeight, 0, 0);
+                Debug.Log(transform.position.x);
+            }
+            if (transform.position.x < maxHeight && touch.position.x > Screen.width / 2)
+            {
+
+                transform.position += new Vector3(maxHeight, 0, 0);
+                Debug.Log(transform.position.x);
+            }
         }
-        if (Input.GetKeyDown(KeyCode.D) && transform.position.x < maxHeight)
-        {
-            transform.position = transform.position + new Vector3(maxHeight, 0, 0);
-        }
+
+        // Codigo para teclas A D computadora
+        //if (Input.GetKeyDown(KeyCode.A) && transform.position.x > minHeight)
+        //{
+        //    transform.position = transform.position + new Vector3(minHeight, 0, 0);
+        //}
+        //if (Input.GetKeyDown(KeyCode.D) && transform.position.x < maxHeight)
+        //{
+        //    transform.position = transform.position + new Vector3(maxHeight, 0, 0);
+        //}
 
         distance = (int)transform.position.z;
         actual.text = "Distance recorred: " + distance.ToString() + "m\nKiwis collected: " + kiwis.ToString();

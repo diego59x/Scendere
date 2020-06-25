@@ -26,7 +26,7 @@ public class Pausa : MonoBehaviour
             DeadactivateMenu();
         }
     }
-    void ActivateMenu()
+    public void ActivateMenu()
     {
         Time.timeScale = 0;
         pauseMenu.SetActive(true);
@@ -50,4 +50,5 @@ public class Pausa : MonoBehaviour
     {
         return isPaused;
     }
+  
 }

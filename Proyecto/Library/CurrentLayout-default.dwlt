@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 875, y: 542}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -46,7 +46,7 @@ MonoBehaviour:
     y: 0
     width: 1360
     height: 685
-  m_MinSize: {x: 875, y: 542}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -115,7 +115,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 24423
+  controlID: 421
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 24336
+  controlID: 422
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 24402
+  controlID: 471
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -309,7 +309,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 627, y: 315}
+  m_TargetSize: {x: 560, y: 315}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -318,14 +318,14 @@ MonoBehaviour:
   m_VSyncEnabled: 0
   m_Gizmos: 0
   m_Stats: 0
-  m_SelectedSizes: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_SelectedSizes: 00000000000000001100000000000000000000000000000000000000000000000000000000000000
   m_ZoomArea:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -313.5
-    m_HBaseRangeMax: 313.5
+    m_HBaseRangeMin: -280
+    m_HBaseRangeMax: 280
     m_VBaseRangeMin: -157.5
     m_VBaseRangeMax: 157.5
     m_HAllowExceedBaseRangeMin: 1
@@ -364,7 +364,7 @@ MonoBehaviour:
   m_LastWindowPixelSize: {x: 627, y: 336}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
-  m_LowResolutionForAspectRatios: 01000000000000000000
+  m_LowResolutionForAspectRatios: 01000100000000000000
   m_XRRenderMode: 0
   m_RenderTexture: {fileID: 0}
 --- !u!114 &13
@@ -398,7 +398,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 6e70feff8a70feff8c70feff9070feff9470feff9870feff2c72feff4872feffe472feffec72fefffe72feff0a73feff9e8bfeffc08bfeff5c8dfeff6090feffcc32ffff6afbffff
+      m_ExpandedIDs: 6afbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -443,9 +443,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 234
+    x: 316
     y: 73
-    width: 848
+    width: 627
     height: 336
   m_ViewDataDictionary: {fileID: 0}
   m_ShowContextualTools: 0
@@ -458,9 +458,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 10.35484, y: 1.3716784, z: -10.025986}
+    m_Target: {x: 0.032383524, y: 4.5396504, z: 0.15037704}
     speed: 2
-    m_Value: {x: 10.35484, y: 1.3716784, z: -10.025986}
+    m_Value: {x: 0.032383524, y: 4.5396504, z: 0.15037704}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 31
@@ -506,13 +506,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.2305023, y: -0.5067129, z: 0.14326519, w: -0.8184107}
+    m_Target: {x: -0.17928201, y: -0.025986146, z: 0.0052229865, w: -0.983548}
     speed: 2
-    m_Value: {x: -0.23047808, y: -0.5066596, z: 0.14325012, w: -0.8183246}
+    m_Value: {x: -0.17926307, y: -0.025983403, z: 0.0052224346, w: -0.9834441}
   m_Size:
-    m_Target: 6.639361
+    m_Target: 0.788649
     speed: 2
-    m_Value: 6.639361
+    m_Value: 0.788649
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -666,20 +666,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Materiales
+    - Assets/Imagenes
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Materiales
+  - Assets/Imagenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\diego\Desktop\Scendere\Proyecto
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: f6370000
-    m_LastClickedID: 14326
-    m_ExpandedIDs: 00000000d8370000da370000dc370000de370000e0370000e237000000ca9a3b
+    m_SelectedIDs: 10380000
+    m_LastClickedID: 14352
+    m_ExpandedIDs: 00000000f4370000f6370000f8370000fa370000fc370000fe37000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -707,7 +707,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000d8370000da370000dc370000de370000e0370000e237000000ca9a3b
+    m_ExpandedIDs: 00000000f4370000f6370000f8370000fa370000fc370000fe37000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -848,8 +848,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 932
+    x: 945
     y: 73
-    width: 427
+    width: 414
     height: 614
   m_ViewDataDictionary: {fileID: 0}
