@@ -25,28 +25,44 @@ public class Movimiento : MonoBehaviour
     public Text actual;
     public float maxHeight;
     public float minHeight;
-
+    // Para usar con: https://docs.unity3d.com/ScriptReference/TouchPhase.Moved.html
+    //public Vector2 startPos;
+    //public Vector2 direction;
+    //Para pausa
+    //https://docs.unity3d.com/2017.3/Documentation/ScriptReference/Rect-ctor.html https://forum.unity.com/threads/defining-areas-of-the-screen-for-touch-input.127103/
+    public Pausa pausa;
+    private bool pause;
+    void Start()
+    {
+        Time.timeScale = 1;
+        pause = pausa.GetPause();
+    }
     void Update()
     {
-
-
-        if (Input.touchCount > 0)
+  
+        if (pause == false)
         {
-            Touch touch = Input.GetTouch(0);
-
-            if (transform.position.x > minHeight && touch.position.x < Screen.width / 2)
+            foreach (Touch touch in Input.touches)
             {
+               if (touch.phase == TouchPhase.Began)
+               {
+                    
 
-                transform.position += new Vector3(minHeight, 0, 0);
-                Debug.Log(transform.position.x);
-            }
-            if (transform.position.x < maxHeight && touch.position.x > Screen.width / 2)
-            {
+                    if (transform.position.x > minHeight && touch.position.x < Screen.width / 2)
+                    {
+                        
+                        transform.position += new Vector3(minHeight, 0, 0);
+                    }
+                    else if (transform.position.x < maxHeight && touch.position.x > Screen.width / 2)
+                    {
 
-                transform.position += new Vector3(maxHeight, 0, 0);
-                Debug.Log(transform.position.x);
+                        transform.position += new Vector3(maxHeight, 0, 0);
+                    }
+               }
             }
         }
+        
+      
 
         // Codigo para teclas A D computadora
         //if (Input.GetKeyDown(KeyCode.A) && transform.position.x > minHeight)

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 public class Pausa : MonoBehaviour
@@ -10,13 +11,11 @@ public class Pausa : MonoBehaviour
 
     // Start is called before the first frame update
     // Update is called once per frame
-    void Update()
+    public void PauseMenu()
     {
         
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            isPaused = !isPaused;
-        }
+        isPaused = !isPaused;
+        
         if (isPaused)
         {
             ActivateMenu();
@@ -28,6 +27,7 @@ public class Pausa : MonoBehaviour
     }
     public void ActivateMenu()
     {
+        AudioListener.pause = true;
         Time.timeScale = 0;
         pauseMenu.SetActive(true);
     }
