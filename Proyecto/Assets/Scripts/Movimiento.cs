@@ -6,64 +6,35 @@ using UnityEngine.SceneManagement;
 using UnityEngine.SocialPlatforms.Impl;
 using System.Net.Http.Headers;
 using UnityEditor;
+using UnityEditor.SceneManagement;
 
 public class Movimiento : MonoBehaviour
 {
-    [SerializeField] private bool isPaused;
-    public GameObject deadMenu;
-    public GameObject actualMenu;
+    // Player prefes
     private static readonly string ContKiwi = "ContKiwi";
     private static readonly string ContDis = "ContDis";
-    private int kiwis = 0;
-    public float speed;
-    private int distance = 0;
-    public AudioSource bite;
-    public AudioSource death;
+    // Menus
+    public GameObject deadMenu;
+    public GameObject actualMenu;
     public float plusVelocity = 0;
     public Text scoreText;
     public Text kiwiText;
     public Text actual;
-    public float maxHeight;
-    public float minHeight;
-    // Para usar con: https://docs.unity3d.com/ScriptReference/TouchPhase.Moved.html
-    //public Vector2 startPos;
-    //public Vector2 direction;
-    //Para pausa
-    //https://docs.unity3d.com/2017.3/Documentation/ScriptReference/Rect-ctor.html https://forum.unity.com/threads/defining-areas-of-the-screen-for-touch-input.127103/
-    public Pausa pausa;
-    private bool pause;
+    // Variables de movimiento
+    private int kiwis = 0;
+    public float speed;
+    private int distance = 0;
+    // Audios
+    public AudioSource bite;
+    public AudioSource death;
+    // Detectar pausa
+    [SerializeField] private bool isPaused;
     void Start()
     {
         Time.timeScale = 1;
-        pause = pausa.GetPause();
     }
     void Update()
     {
-  
-        if (pause == false)
-        {
-            foreach (Touch touch in Input.touches)
-            {
-               if (touch.phase == TouchPhase.Began)
-               {
-                    
-
-                    if (transform.position.x > minHeight && touch.position.x < Screen.width / 2)
-                    {
-                        
-                        transform.position += new Vector3(minHeight, 0, 0);
-                    }
-                    else if (transform.position.x < maxHeight && touch.position.x > Screen.width / 2)
-                    {
-
-                        transform.position += new Vector3(maxHeight, 0, 0);
-                    }
-               }
-            }
-        }
-        
-      
-
         // Codigo para teclas A D computadora
         //if (Input.GetKeyDown(KeyCode.A) && transform.position.x > minHeight)
         //{
@@ -76,10 +47,6 @@ public class Movimiento : MonoBehaviour
 
         distance = (int)transform.position.z;
         actual.text = "Distance recorred: " + distance.ToString() + "m\nKiwis collected: " + kiwis.ToString();
-
-       
-       
-
     }
 
     private void FixedUpdate()
@@ -131,7 +98,6 @@ public class Movimiento : MonoBehaviour
 
         }
     }
-
     void ActivateMenu()
     {
         actualMenu.SetActive(false);
