@@ -29,21 +29,23 @@ public class Movimiento : MonoBehaviour
     public AudioSource death;
     // Detectar pausa
     [SerializeField] private bool isPaused;
+    public float maxHeight;
+    public float minHeight;
     void Start()
     {
         Time.timeScale = 1;
     }
     void Update()
     {
-        // Codigo para teclas A D computadora
-        //if (Input.GetKeyDown(KeyCode.A) && transform.position.x > minHeight)
-        //{
-        //    transform.position = transform.position + new Vector3(minHeight, 0, 0);
-        //}
-        //if (Input.GetKeyDown(KeyCode.D) && transform.position.x < maxHeight)
-        //{
-        //    transform.position = transform.position + new Vector3(maxHeight, 0, 0);
-        //}
+        //Codigo para teclas A D computadora
+        if (Input.GetKeyDown(KeyCode.A) && transform.position.x > minHeight)
+        {
+            transform.position = transform.position + new Vector3(minHeight, 0, 0);
+        }
+        if (Input.GetKeyDown(KeyCode.D) && transform.position.x < maxHeight)
+        {
+            transform.position = transform.position + new Vector3(maxHeight, 0, 0);
+        }
 
         distance = (int)transform.position.z;
         actual.text = "Distance recorred: " + distance.ToString() + "m\nKiwis collected: " + kiwis.ToString();
@@ -56,7 +58,7 @@ public class Movimiento : MonoBehaviour
             plusVelocity = 1.8f;
         }
         transform.Translate(Vector3.forward * (speed  + plusVelocity) * Time.deltaTime);
-       // Vector3 tempPos = transform.position;
+        Vector3 tempPos = transform.position;
 
     }
 
